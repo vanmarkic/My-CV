@@ -7,29 +7,37 @@
 
 }
 
+
+
+
+
+
+
 .wrapper {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-       grid-auto-rows: minmax(100px auto);
-    justify-items: stretch;
-    align-items: stretch;
-    grid-gap: .5em;
-    width: 100vw;
-    height: 100vh;
+    grid-template-columns: 1fr;
+    /*    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));*/
+    /*       grid-auto-rows: minmax(10px auto);*/
+    grid-auto-rows: minmax(125px, auto);
+    grid-gap: .5rem;
+    /*    grid-template-rows: auto;*/
+
+    /*       width: 100vw;*/
+    /*    height: 100vh;*/
 }
 
+#entete {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    height: 80px;
 
-/*
-.entete {
-   padding: 0;
-    margin: 0;
-  }
-*/
+}
+
 
 #dragan {
     float: left;
     grid-column: 1/2;
-    
+
 }
 
 #linkedin {
@@ -38,7 +46,7 @@
     font-size: 1.5em;
     margin: .5em;
     color: black;
-   
+
 
 }
 
@@ -52,20 +60,28 @@ h1 {
     color: white;
     font-size: 20px
 }
-    
+
 h2 {
     margin: .5em;
     color: black;
-
 }
 
-p {}
+h5 {
+    margin-top: 2em;
+    color: orange;
+}
+
+p {
+    margin: .2em 0 1em 0;
+}
 
 
 .box {
     padding: 1em;
-    
-   
+    width: 100%;
+    object-fit: cover;
+
+
 
 }
 
@@ -73,9 +89,9 @@ p {}
 
 .box1 {
     /*        align-self: start;*/
-    grid-column: 1/3;
-    /*    grid-row: 1/3;*/
-/*    height: 100vh;*/
+
+
+    /*    height: 100vh;*/
 
 
     background: #349992;
@@ -83,27 +99,145 @@ p {}
 
 .box2 {
     /*        align-self: end;*/
-    grid-column: ;
-    /*    grid-row: 1/3;*/
+
+
     background: #236661;
 }
 
 .box3 {
-    /*        justify-self: end;*/
-    grid-column: 1;
-    grid-row: 2/3;
+    /*            justify-self: end;*/
     background: #349992;
 }
 
 .box4 {
-
-    grid-column: 2/4;
-    grid-row: 2/3;
     background: #46CCC3;
 }
 
 
+/*
 .box5 {
+     display: inline-block;
+    float: left;
+
+    }
+
+
+.box6 {
+    display: inline-block
+    float: left;
+}
+*/
+
+@media screen and (min-width: 500px) {
+    .wrapper {
+        display: grid;
+        /*    grid-template-columns: 1fr 2fr 1fr;*/
+        /*    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));*/
+        /*       grid-auto-rows: minmax(10px auto);*/
+
+        grid-template-rows: 5em auto auto;
+        justify-items: stretch;
+        align-items: stretch;
+        grid-gap: .5em;
+        width: 100vw;
+        height: 100vh;
+    }
+
+
+
+
+
+
+    #dragan {
+        float: left;
+        grid-column: 1/2;
+
+    }
+
+    #linkedin {
+        float: right;
+        vertical-align: middle;
+        font-size: 1.5em;
+        margin: .5em;
+        color: black;
+
+
+    }
+
+    ul {
+        padding-left: 1em;
+    }
+
+
+    h1 {
+        font-family: Montserrat;
+        color: white;
+        font-size: 20px
+    }
+
+    h2 {
+        margin: .5em;
+        color: black;
+
+
+    }
+
+    p {}
+
+
+    .box {
+        padding: 1em;
+        width: 100%;
+        object-fit: cover;
+
+
+
+    }
+
+
+
+    .box1 {
+        /*        align-self: start;*/
+        grid-column: 1/3;
+        grid-row: /3;
+        /*    height: 100vh;*/
+
+
+        background: #349992;
+    }
+
+    .box2 {
+        /*        align-self: end;*/
+        grid-column: 2/3;
+        grid-row: 2/3;
+        background: #236661;
+    }
+
+    .box3 {
+        /*            justify-self: end;*/
+        grid-column: ;
+        grid-row: 2/3;
+        background: #349992;
+    }
+
+    .box4 {
+
+        grid-column: 3/4;
+        grid-row: 2/4;
+        background: #46CCC3;
+    }
+
+    /*
+  #entete {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    height: 80px;
+    
+  }
+*/
+
+    .box5 {
+        /*
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-auto-rows: minmax(100px auto);
@@ -113,5 +247,25 @@ p {}
 
     grid-column: 1/4;
     height: 100px;
+*/
+        grid-row: 1/2;
 
+    }
+
+    .box6 {
+        /*
+        grid-column: 3/4;
+        grid-row: 1/2;
+*/
+
+
+
+    }
+
+    #entete {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        height: 80px;
+
+    }
 }
